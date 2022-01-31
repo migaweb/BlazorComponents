@@ -1,0 +1,8 @@
+﻿<div class="container">
+    <div class="progress-container">
+      <div class="progress" id="progress" style="width:@ProgressWidth%"></div>
+      @foreach (var step in AllSteps) {
+          <div class="@(IsActivated(step.Id) ? "circle active" : "circle")">@step.Id</div>
+      }
+    </div>
+  </div>
