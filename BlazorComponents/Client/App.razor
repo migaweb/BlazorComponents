@@ -1,6 +1,8 @@
 ﻿<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <ThemeProvider>
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </ThemeProvider>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
@@ -10,3 +12,14 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    Theme theme = new Theme
+        {
+            Colors = new Colors
+            {
+                Primary = "#000"
+            }
+
+        };
+}

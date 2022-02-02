@@ -1,5 +1,10 @@
 ﻿<h3>Progress steps</h3>
-<ProgressSteps @ref="_progressSteps" Steps="_numberOfSteps" @bind-Value="_currentStep" />
+<ProgressSteps @ref="_progressSteps" 
+               Steps="_numberOfSteps" 
+               @bind-Value="_currentStep" 
+               CircleDiameter="_circleDiameter"
+               ProgressLineHeight="_progressLineHeight"
+               />
 <div>
     <button class="btn" id="prev" @onclick="() => _progressSteps?.Previous()">Prev</button>
     <input @bind="_currentStep" type="number" step="1" max="@_numberOfSteps" min="1"  />
@@ -10,4 +15,6 @@
     private ProgressSteps _progressSteps = null!;
     private int _numberOfSteps = 10;
     private int _currentStep = 4;
+    private int _circleDiameter = 40;
+    private int _progressLineHeight = 4;
 }

@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Components;
 
 namespace ComponentLibrary.Components;
-public partial class ProgressSteps : ComponentBase
+public partial class ProgressSteps : BaseComponent
 {
   private int _value;
 
   [Parameter] public int Steps { get; set; }
   [Parameter] public EventCallback<int> ValueChanged { get; set; }
+
+  [Parameter] public int CircleDiameter { get; set; } = 30;
+  [Parameter] public int ProgressLineHeight { get; set; } = 4;
 
   [Parameter]
   public int Value
