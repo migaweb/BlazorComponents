@@ -1,0 +1,41 @@
+﻿ .container {
+  background-color: transparent;
+  margin-top: 1rem;
+}
+
+.wave-control {
+    position: relative;
+    width: 100%;
+}
+
+.wave-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #ebebeb solid;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.wave-control input:focus,
+.wave-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.wave-control label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+.wave-control label span {
+    display: inline-block;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wave-control input:focus + label span,
+.wave-control input:valid + label span {
+    transform: translateY(-30px);
+}

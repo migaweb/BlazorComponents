@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits InputBase<string>
+
+<div class="container">
+<div class="wave-control">
+    <input @bind-value="@CurrentValue" 
+           @oninput="@OnInputChange" 
+           id="@Id" 
+           type="text"
+           required>
+    <label for="@Id" style="color:@Theme.Colors.Primary">@((MarkupString)LabelMarkupString)</label>
+</div>
+</div>
+
+<style>
+    .wave-control input {
+        border-bottom-color: @Theme.Colors.Gray;
+    }
+    .wave-control input:focus[@_cssScope] {
+        border-bottom-color: @Theme.Colors.Primary;
+    }
+</style>
+    @*.wave-control input:valid[@_cssScope] {
+        border-bottom-color: @Theme.Colors.Success;
+    }
+    .wave-control input:invalid:not(:not(:focus))[@_cssScope] {
+        border-bottom-color: @Theme.Colors.Invalid;
+    }*@

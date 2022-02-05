@@ -15,4 +15,6 @@ public class Colors
   public string Primary { get; set; } = "#3498db";
   public string Secondary { get; set; } = "#3498db";
   public string Gray { get; set; } = "#e0e0e0";
+  public string Success { get; set; } = "#4BB543";
+  public string Invalid { get; set; } = "#DA0A5E";
 }

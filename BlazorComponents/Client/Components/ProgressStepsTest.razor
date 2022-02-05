@@ -5,11 +5,11 @@
                CircleDiameter="_circleDiameter"
                ProgressLineHeight="_progressLineHeight"
                />
-<div>
+<ComponentControls>
     <button class="btn" id="prev" @onclick="() => _progressSteps?.Previous()">Prev</button>
     <input @bind="_currentStep" type="number" step="1" max="@_numberOfSteps" min="1"  />
     <button class="btn" id="next" @onclick="() => _progressSteps?.Next()">Next</button>
-</div>
+</ComponentControls>
 
 @code {
     private ProgressSteps _progressSteps = null!;

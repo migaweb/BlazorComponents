@@ -14,6 +14,10 @@
     <Content Include="Components\ProgressSteps.razor.css" />
   </ItemGroup>
 
+	<ItemGroup>
+		<None Update="Components/InputWave.razor.css" CssScope="wave-component" />
+	</ItemGroup>
+
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />

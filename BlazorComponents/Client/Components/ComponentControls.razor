@@ -1,0 +1,21 @@
+﻿<div style="margin-top:1rem;display:flex;align-items:center;justify-content:@GetJustifyContentString(Justify);">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public JustifyContent Justify { get; set; } = JustifyContent.Center;
+
+    internal static string GetJustifyContentString(JustifyContent justify) => justify switch
+    {
+        JustifyContent.Center    => "center",
+        JustifyContent.Right => "right",
+        _ => "center",
+    }; 
+
+    public enum JustifyContent
+    {
+        Right,
+        Center
+    } 
+}
