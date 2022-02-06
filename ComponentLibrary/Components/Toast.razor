@@ -1,0 +1,11 @@
+﻿@inherits BaseComponent
+@using ComponentLibrary.Components.Providers
+
+<div id="@GetToastPosition()">
+    @foreach(var toast in ToastMessages) {
+        <div class="toast" 
+             style="color:@GetColorByType(toast.Type);background-color:@Theme.Colors.Bakcground;border-color:@Theme.Colors.Primary;">
+            @toast.Message
+        </div>
+    }
+</div>

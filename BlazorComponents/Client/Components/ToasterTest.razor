@@ -1,0 +1,33 @@
+﻿<h3>Toast</h3>
+
+<Toast @ref="_toaster" Position="ToastPosition.BottomRight" />
+
+<ComponentControls Justify="ComponentControls.JustifyContent.Center">
+    <button @onclick="_ => CreateToast(ToastType.Info)">Info</button>
+    <button @onclick="_ => CreateToast(ToastType.Success)">Success</button>
+    <button @onclick="_ => CreateToast(ToastType.Error)">Error</button>
+</ComponentControls>
+
+@code {
+    private Toast? _toaster = null;
+
+    private void CreateToast(ToastType toastType)
+    {
+        _toaster?.CreateNotification(GetRandomToastMessage(), toastType);
+    }
+
+    private string GetRandomToastMessage()
+    {
+        var toastMessages = new string[]
+        {
+            "We are here! Let's chat?",
+            "Just another toast message!",
+            "There was an error in the request.",
+            "Please provide a value for the requested field.",
+            "Operation was succcessful."
+        };
+
+        var random = new Random();
+        return toastMessages[random.Next(0, toastMessages.Length - 1)];
+    }
+}
