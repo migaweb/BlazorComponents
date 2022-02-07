@@ -1,0 +1,21 @@
+﻿<h3>Toggle checkbox</h3>
+
+<EditForm Model="Model">
+    <ToggleCheckbox Label="Good" Id="good" @bind-Value="@Model.Good" />
+    <ToggleCheckbox Label="Bad" Id="bad" @bind-Value="@Model.Bad" />
+</EditForm>
+
+Good: @Model.Good, Bad: @Model.Bad
+
+@code {
+    private ToggleModel Model { get; set; } = new();
+
+
+
+    private class ToggleModel {
+        public bool Good { get; set; } = true;
+        public bool Bad { get; set; } = false;
+    }
+}
+
+

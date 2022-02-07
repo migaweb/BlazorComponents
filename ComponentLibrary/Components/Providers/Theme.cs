@@ -13,7 +13,7 @@ public class Theme
 public class Colors
 {
   public string Primary { get; set; } = "#3498db";
-  public string Secondary { get; set; } = "#3498db";
+  public string Secondary { get; set; } = "#ff6600";
   public string Gray { get; set; } = "#e0e0e0";
   public string Success { get; set; } = "#4BB543";
   public string Error { get; set; } = "#DA0A5E";

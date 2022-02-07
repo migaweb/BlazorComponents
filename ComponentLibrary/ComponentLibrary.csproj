@@ -16,6 +16,7 @@
 
 	<ItemGroup>
 		<None Update="Components/InputWave.razor.css" CssScope="wave-component" />
+		<None Update="Components/ToggleCheckbox.razor.css" CssScope="togglecb-component" />
 	</ItemGroup>
 
 

@@ -8,7 +8,7 @@
       </div>
       @foreach (var step in AllSteps) {
           <div 
-            style="border-color:@(IsActivated(step.Id) ? Theme.Colors.Primary : Theme.Colors.Gray);color:@(IsActivated(step.Id) ? Theme.Colors.Primary : Theme.Colors.Gray);width:@(CircleDiameter)px;height:@(CircleDiameter)px;border-width:@(ProgressLineHeight)px"
+            style="border-color:@GetColor(step.Id);color:@GetColor(step.Id);width:@(CircleDiameter)px;height:@(CircleDiameter)px;border-width:@(ProgressLineHeight)px"
             class="@(IsActivated(step.Id) ? "circle active" : "circle")">@step.Id</div>
       }
     </div>

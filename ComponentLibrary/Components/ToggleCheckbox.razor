@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits InputBase<bool>
+
+<div class="toggle-container">
+    <input type="checkbox" @bind="@CurrentValue" id="@Id" class="toggle">
+    <label for="@Id" class="label" >
+      <div class="ball"></div>
+    </label>
+    <span>@Label</span>
+  </div>
+
+  <style>
+      .label {
+        background-color: @Theme.Colors.Gray;
+    }
+      .toggle:checked + .label[@_cssScope] {
+        background-color: @Theme.Colors.Primary;
+      }
+  </style>

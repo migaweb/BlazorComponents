@@ -107,6 +107,14 @@ public partial class ProgressSteps : BaseComponent
     AllSteps.ForEach(e => e.Active = false);
   }
 
+  private string GetColor(int currentStep)
+  {
+    if (currentStep < ActiveStep) return Theme.Colors.Primary;
+    if (currentStep == ActiveStep) return Theme.Colors.Secondary;
+
+    return Theme.Colors.Gray;
+  }
+
   private bool IsActivated(int currentStep)
   {
     return currentStep <= ActiveStep;
